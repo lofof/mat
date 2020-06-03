@@ -1,0 +1,13 @@
+syms x y;
+disp("1)");
+f1 = (sqrt(1-x^2))./x^2;
+rez1 = int(f1);
+disp(rez1);
+disp("2)");
+f2 = 1/sin(x)^3;
+rez2 = int(f2);
+disp(rez2);
+disp("5)");
+f5 =1/(1+x^2);
+rez5 = int(f5,0,inf);
+disp(rez5);

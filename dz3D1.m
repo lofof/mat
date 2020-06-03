@@ -1,0 +1,10 @@
+[x,y] = meshgrid(-10:0.5:10,-10:0.5:10);
+a = input("a = ");
+b = input("b = ");
+c = input("c = ");
+d = input("d = ");
+z = (-a.*x-b.*y-d)/c;
+figure;
+surfc(x,y,z);
+view(30,55);
+title("ax+by+cz+d=0");

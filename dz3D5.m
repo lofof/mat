@@ -1,0 +1,10 @@
+f = @(x,y,z)(-x.^2.*z.^3 - 9.*y.^2.*z.^3/80 + (x.^2 + 9.*y.^2/4 + z.^2-1).^3);
+[X,Y,Z]=meshgrid(-3:0.05:3,-3:0.05:3,-3:0.05:3);
+v=f(X,Y,Z);
+f=isosurface(X,Y,Z,v,0);
+p = patch(f);
+isonormals(X,Y,Z,v,p);
+set(p,'FaceColor' , 'red');
+set(p,'EdgeColor' , 'red');
+daspect([1,1,1]);
+view(3);camlight ; 

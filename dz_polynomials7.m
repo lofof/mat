@@ -1,0 +1,17 @@
+P1 = [1,-6,15,-14];
+P2 = [1,-2,-8,13,-24];
+R1 = roots(P1);
+R2 = roots(P2);
+disp(R1);
+disp(R2);
+x = linspace(-5,5,100);
+x1 = 0;
+y = linspace(-5,5,100);
+f1 = polyval(P1,x);
+f2 = polyval(P2,x);
+f3 = polyval(x1,y);
+plot(x,f1);
+grid on;
+hold on;
+plot(x,f2);
+plot(y,f3);

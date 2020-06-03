@@ -1,0 +1,15 @@
+syms x y;
+disp('1)');
+f1 = exp(x);
+rez1 = taylor(f1, x, 0);
+disp(rez1);
+fplot(f1,[-5 5]);
+hold on;
+fplot(rez1,[-5 5]);
+disp('3)');
+f2 = sin(x)^2;
+rez2 = taylor(f2,x,0);
+disp(rez2);
+fplot(rez2,[-5 5]);
+hold on;
+fplot(f2,[-5 5]);

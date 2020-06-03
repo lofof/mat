@@ -1,0 +1,16 @@
+P11 = [1, 0, -4, 6, -8, 10];
+P12 = [5, 0, -12, 12, -8];
+syms x;
+P1 = x^5 - 4*x^3 + 6*x^2 - 9*x + 10;
+x0 = 2;
+P2 = 5*x^4 - 12*x^2 + 12*x -8;
+P1 = horner(P1);
+P2 = horner(P2);
+disp(P1);
+disp(P2);
+P1 = subs(P1, x, x0);
+P2 = subs(P2, x, x0);
+P11 = polyval(P11,x0);
+P12 = polyval(P12,x0);
+disp("P(x0) = "); disp(P1); disp("/"); disp(P11);
+disp("P'(x0) = "); disp(P2); disp("/"); disp(P12);
